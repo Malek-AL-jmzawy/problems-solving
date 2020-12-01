@@ -10,29 +10,16 @@ function uniqueItems(arr) {
   // YOUR CODE HERE
   const uniqueArr = arr;
   let unique = 0
-  const arr2=[]
+  const arr2 = []
   for (let index = 0; index < uniqueArr.length; index++) {
-    if (!(arr2.includes(uniqueArr[index]))) {
-      uniqueArr.forEach(element => {
-        if (element === uniqueArr[index]) {
-          // unique += 1
-          arr2.push(element)
-          // console.log("unique1", unique);
-          console.log("element", element);
-          console.log("uniqueArr[index]", uniqueArr[index]);
-  
-        }
-      });
-    }else{
-      console.log("exist");
+    if (!arr2.includes(uniqueArr[index])) {
+
+      unique += 1
+      arr2.push(uniqueArr[index])
     }
-    
-
   }
-  console.log("unique2", unique);
-  console.log("arr2", arr2);
+  return unique
 }
-
 /*
 Examples:
 uniqueItems([1, 1, 1, 1, 1]) // => 1
