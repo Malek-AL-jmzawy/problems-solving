@@ -46,7 +46,7 @@ function characterFrequency(input) {
   // console.log("arrSort[length - 1]" ,m );
   if (arrSort[arrSort.length - 1] === arrSort[arrSort.length - 2]) {
     countArr[countArr.length - 1]++
-  } else {
+  } else  if (!(arrSort[arrSort.length - 1] === arrSort[arrSort.length - 2])) {
     countArr.push(1)
   }
   console.log("countArr", countArr);
