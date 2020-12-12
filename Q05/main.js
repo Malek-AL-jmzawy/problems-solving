@@ -31,7 +31,6 @@ function findIntersection(strArr) {
       if (arr2.indexOf(this[i]) > -1) {
         ret.push(this[i]);
         newArr.push(this[i]);
-
       }
     }
     return ret
