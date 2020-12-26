@@ -9,8 +9,8 @@
 //   anagrams('Hi there', 'Bye there') --> False
 
 function anagrams(stringA, stringB) {
-    const newArrA = stringA.replace(/[.*+,?^${/@!#$%^&*_=+/}()|[\]\\]/g, '').split("")
-    const newArrB = stringB.replace(/[.*+,?^${/@!#$%^&*_=+/}()|[\]\\]/g, '').split("")
+    const newArrA = stringA.replace(/[.*+,?^${/@!#$%^&*_=+/}()" "|[\]\\]/g, '').split("")
+    const newArrB = stringB.replace(/[.*+,?^${/@!#$%^&*_=+/}()" "|[\]\\]/g, '').split("")
     arrb = true
     var lastLength=0
     if (newArrA.length > newArrB.length) {
@@ -33,8 +33,10 @@ function anagrams(stringA, stringB) {
 
     if (res.indexOf(false) === -1) {
         console.log("resfinal", true);
+        return true
     } else {
         console.log("resfinal", false);
+        return false
 
     }
 }
