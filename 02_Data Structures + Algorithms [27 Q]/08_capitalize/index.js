@@ -15,8 +15,6 @@ function capitalize(str) {
         var res = str1.substring(2)
         var res2=res.concat(newStr[index])
         capArr.push(res)
-        console.log("capArr", capArr);
-        // console.log("capArr", upper);
         newStr[index].split("")
     }
 return capArr.toString()
