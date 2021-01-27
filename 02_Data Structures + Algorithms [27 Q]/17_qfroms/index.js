@@ -5,12 +5,12 @@
 // For a reminder on what each method does, look back
 // at the Queue exercise.
 // --- Examples
-//     const q = new Queue();
-//     q.add(1);
-//     q.add(2);
-//     q.peek();  // returns 1
-//     q.remove(); // returns 1
-//     q.remove(); // returns 2
+    const q = new Queue();
+    q.add(1);
+    q.add(2);
+    q.peek();  // returns 1
+    q.remove(); // returns 1
+    q.remove(); // returns 2
 
 const Stack = require('./stack');
 
@@ -26,16 +26,17 @@ class Queue {
             this.S2=new Stack
         }
         this.S1.push(elem)
-        this.S2.push(elem)
+        this.S2.push(elem) 
         return this.length++
     }
     remove (){
+        if (this.length === 0) return null;
         this.S1.pop()
-        this.S2.pop()
-        return this.data.shift()
+        this.length--
+        return  this.S2.pop()  
     }
     peek(){
-        return this.S1.peek()
+        return this.S2.data[0]
     }
 }
 
