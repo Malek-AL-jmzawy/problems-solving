@@ -12,21 +12,23 @@
 
 class Stack {
     constructor(){
-        data=[];
-        i=0;
+        this.data=[];
+         this.i=0;
     }
     push(elem){
-        return this.data[i++]=elem
+        this.data[this.i] =elem
+        this.i++
+        return this.data[this.i-1]
     }
     pop(){
-        if (i==0) {
+        if (this.i==0) {
             return
         }
-        i--
+        this.i--
         return this.data.pop()
     }
     peek(){
-        return this.data[i]
+        return this.data[this.data.length-1]
     }
 }
 
