@@ -16,13 +16,18 @@ const Stack = require('./stack');
 
 class Queue {
     constructor(sourceOne, sourceTwo){
-        this.S1=new Stack
-        this.S2=new Stack
+        this.length=0
+        this.S1Value=null
+        this.S2Value=null
     }
     add (elem){
+        if (this.length==0) {
+            this.S1=new Stack
+            this.S2=new Stack
+        }
         this.S1.push(elem)
         this.S2.push(elem)
-        return this.data.push(elem)
+        return this.length++
     }
     remove (){
         this.S1.pop()
